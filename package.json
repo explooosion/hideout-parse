@@ -1,0 +1,62 @@
+{
+  "name": "hideout-parse",
+  "version": "0.1.0",
+  "description": "Parse Path Of Exile.",
+  "main": "lib/hideout-parse.js",
+  "scripts": {
+    "build": "webpack --env dev && webpack --env build && npm run test",
+    "dev": "webpack --progress --colors --watch --env dev",
+    "test": "mocha --require babel-register --colors ./test/*.spec.js",
+    "test:watch": "mocha --require babel-register --colors -w ./test/*.spec.js",
+    "test:cover": "cross-env NODE_ENV=test nyc mocha --require babel-register --colors test/*.js",
+    "repl": "node -i -e \"$(< ./lib/hideout-parse.js)\""
+  },
+  "keywords": [
+    "pathofexile",
+    "hideout",
+    "parse",
+    "parser",
+    "path-of-exile"
+  ],
+  "author": {
+    "name": "Robby",
+    "email": "ta7382@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/explooosion/hideout-parse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/explooosion/hideout-parse/issues"
+  },
+  "homepage": "https://github.com/explooosion/hideout-parse",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.51",
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "babel-eslint": "^8.0.3",
+    "babel-loader": "^8.0.0-beta.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-istanbul": "^5.1.0",
+    "babel-preset-env": "^7.0.0-beta.41",
+    "babel-register": "^7.0.0-beta.41",
+    "chai": "^4.1.2",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.0.1",
+    "eslint-loader": "^2.0.0",
+    "jsdom": "11.11.0",
+    "jsdom-global": "3.0.2",
+    "mocha": "^4.0.1",
+    "nyc": "^13.1.0",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.12.2",
+    "webpack-cli": "^3.0.8",
+    "yargs": "^10.0.3"
+  },
+  "nyc": {
+    "sourceMap": false,
+    "instrument": false
+  }
+}
